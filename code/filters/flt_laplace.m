@@ -42,7 +42,7 @@ function signal = flt_laplace(varargin)
 
 % flt_laplace_version<1.0> -- for the cache
 
-if ~exp_beginfun('filter') return; end
+%if ~exp_beginfun('filter') return; end
 
 declare_properties('name','SurfaceLaplacian', 'follows','flt_selchans', 'cannot_follow','flt_ica', 'independent_channels',false, 'independent_trials',true);
 
@@ -86,7 +86,7 @@ end
 signal.data(ok,:,:) = reshape(M*reshape(signal.data(ok,:,:),length(ok),[]),length(ok),size(signal.data,2),size(signal.data,3));
 
 % append the M and ok arguments to the online expression
-exp_endfun('append_online',{'M',M,'ok',ok});
+%exp_endfun('append_online',{'M',M,'ok',ok});
 
 
 
